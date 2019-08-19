@@ -39,15 +39,15 @@ set dhcp.wglan_dns.readethers='1'
 set dhcp.wglan_dns.leasefile='/tmp/dhcp.leases.wglan'
 set dhcp.wglan_dns.resolvfile='/tmp/rdsolv.conf.wglan'
 set dhcp.wglan_dns.nonwildcard='1'
-set dhcp.wglan_dns.interface='wglan'
-set dhcp.wglan_dns.notinterface='loopback lan wgwifi'
+add_list dhcp.wglan_dns.interface='wglan'
+add_list dhcp.wglan_dns.notinterface='loopback' 'lan' 'wgwifi'
 set dhcp.wglan=dhcp
 set dhcp.wglan.instance='wglan_dns'
 set dhcp.wglan.interface='wglan'
 set dhcp.wglan.start='50'
 set dhcp.wglan.lhmit='150'
 set dhcp.wglan.leasetime='24h'
-set dhcp.wglan.dhcp_option='6,8.8.8.8,1.1.1.1' '3,192.168.28.1'
+add_list dhcp.wglan.dhcp_option='6,8.8.8.8,1.1.1.1' '3,192.168.28.1'
 
 commit dhcp
 
@@ -56,7 +56,7 @@ set firewall.@zone[-1].network='wglan'
 set firewall.@zone[-1].input='ACCEPT'
 set firewall.@zone[-1].output='ACCEPT'
 set firewall.@zone[-1].forward='ACCEPT'
-set 
+
 set firewall.@forwarding[-1]=forwarding
 set firewall.@forwarding[-1].src='wglan'
 set firewall.@forwarding[-1].dest='wireguard'
