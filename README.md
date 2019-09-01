@@ -1,6 +1,6 @@
 # openwrt_uci
 openwrt uci shell
-* NOTICE: for chinese user, change timezone from 'UTF' to 'CST-8'
+* NOTICE: for chinese user, change /etc/config/system timezone from 'UTF' to 'CST-8'
 ```
 config system
         option hostname 'OpenWrt'
