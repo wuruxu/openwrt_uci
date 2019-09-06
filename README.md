@@ -20,3 +20,6 @@ this firmware bin only used for netgear wnr2000v4, add wireguard and led-trigger
 this firmware bin only used for netgear wndr3800 1chan , add wireguard and led-trigger-netdev support. I will update this firmware frequently.![STATUS](openwrt_status.png)
 ![WIREGURAD_FIREWALL](openwrt_firewall.png)
 
+* openwrt-brcm2708-bcm2710-rpi-3-squashfs-sysupgrade.img
+this firmware bin only used for raspberry pi 3, add transmission, minildna, privoxy, strongswan, samba4, wireguard and led-trigger-netdev                
+![STATUS](rp3_openwrt_status.png)
